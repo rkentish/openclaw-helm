@@ -269,6 +269,8 @@ app-template:
             capabilities:
               drop:
                 - ALL
+              add:
+                - SYS_PTRACE  # needed for OOM score adjustment
           # -- Resource requests and limits
           resources:
             requests:
@@ -358,6 +360,8 @@ app-template:
             capabilities:
               drop:
                 - ALL
+              add:
+                - SYS_PTRACE  # needed for OOM score adjustment
           resources:
             requests:
               # @schema type:string;default:100m
