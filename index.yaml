@@ -1,0 +1,83 @@
+apiVersion: v1
+entries:
+  app-template:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: |-
+            Upgraded the common library to v4.6.2
+          links:
+            - name: Upgrade notes
+              url: https://bjw-s-labs.github.io/helm-charts/docs/app-template/upgrade-instructions/
+            - name: Detailed release notes
+              url: https://github.com/bjw-s-labs/helm-charts/releases/tag/common-4.6.2
+    apiVersion: v2
+    created: "2026-03-24T10:54:35.11064+11:00"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 4.6.2
+    description: A common powered chart template. This can be useful for small projects
+      that don't have their own chart.
+    digest: ebcb07c6f7ba2df7719ee19911d086c712e2162382437e8eea7b817bc0ae2690
+    kubeVersion: '>=1.28.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: app-template
+    sources:
+    - https://github.com/bjw-s-labs/helm-charts
+    urls:
+    - https://rkentish.github.io/openclaw-helm/charts/app-template-4.6.2.tgz
+    version: 4.6.2
+  openclaw:
+  - annotations:
+      artifacthub.io/category: ai-machine-learning
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Bump Chromium to 146.0.7680.154"
+      artifacthub.io/images: |
+        - name: openclaw
+          image: ghcr.io/openclaw/openclaw:2026.3.13-1
+        - name: chromium
+          image: chromedp/headless-shell:146.0.7680.154
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://serhanekici.com/openclaw-helm.html
+        - name: Source
+          url: https://github.com/serhanekicii/openclaw-helm
+      artifacthub.io/signKey: |
+        fingerprint: 663862EB60C50E04AD73F198CA0FB121610B01FF
+        url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x663862EB60C50E04AD73F198CA0FB121610B01FF
+    apiVersion: v2
+    appVersion: 2026.3.13-1
+    created: "2026-03-24T10:54:35.106876+11:00"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s-labs.github.io/helm-charts/
+      version: 4.6.2
+    description: Helm chart for deploying OpenClaw on Kubernetes — an AI assistant
+      that connects to messaging platforms and executes tasks autonomously.
+    digest: 38c4fef5a95142d1079e3958b73e9a7bc91d6c4603b6e5bf61e01ec7305aca2c
+    home: https://github.com/openclaw/openclaw
+    icon: https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png
+    keywords:
+    - ai
+    - assistant
+    - chatbot
+    - automation
+    - kubernetes
+    kubeVersion: '>=1.26.0-0'
+    maintainers:
+    - name: Serhan Ekici
+      url: https://serhanekici.com
+    name: openclaw
+    sources:
+    - https://github.com/serhanekicii/openclaw-helm
+    - https://serhanekici.com/openclaw-helm.html
+    type: application
+    urls:
+    - https://rkentish.github.io/openclaw-helm/openclaw-1.5.5.tgz
+    version: 1.5.5
+generated: "2026-03-24T10:54:35.100387+11:00"
